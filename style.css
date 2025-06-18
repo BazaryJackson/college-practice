@@ -1,0 +1,332 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Book Antiqua", serif;
+  font-style: italic;
+  background: #fff;
+  color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  margin-top: 8px;
+}
+
+.brand {
+  font-size: 67pt;
+  user-select: none;
+  cursor: pointer;
+}
+
+.cart {
+  font-size: 36pt;
+  user-select: none;
+  position: relative;
+  top: -6px;
+}
+
+.count {
+  opacity: 0.8;
+}
+
+.frame-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  margin-top: 20px;
+  padding: 39px 0;
+}
+
+.frame-horizontal {
+  height: 39px;
+  background: url("img/frame.png") repeat-x;
+  background-size: auto 100%;
+}
+.frame-horizontal.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.frame-horizontal.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  height: 410px;
+}
+
+.hero-left {
+  width: 331px;
+  height: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.hero-right {
+  width: 331px;
+  height: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.hero-left img,
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-frame-between {
+  width: 20px;
+  height: 100%;
+  background: url("img/frame-vertical.png") repeat-y;
+  background-size: 100% auto;
+  flex-shrink: 0;
+}
+
+.hero-center {
+  flex-grow: 1;
+  height: 100%;
+  overflow: hidden;
+}
+.hero-center video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.products {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 39px;
+  overflow-x: hidden;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.product {
+  position: relative;
+  width: 305px;
+  height: 393px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: 20px solid transparent;
+  border-image: url("frame.png") 30 round;
+  display: block;
+  box-sizing: border-box;
+}
+
+.product .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-style: italic;
+  font-family: "Book Antiqua", serif;
+  background: rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
+}
+
+.product-frame {
+  width: 20px;
+  height: 393px;
+  background: url("img/frame-vertical.png") repeat-y;
+  background-size: 100% auto;
+  flex-shrink: 0;
+  position: relative;
+  margin-top: -39px;
+}
+
+.product-frame.first-frame {
+  margin-left: 0;
+  margin-top: -78px;
+}
+
+.product-frame.last-frame {
+  margin-right: 20px;
+}
+
+.product {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.product .hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-shadow: 0 0 6px black;
+  border-radius: 8px;
+}
+
+.product:hover .hover-overlay {
+  opacity: 1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  max-width: 640px;
+  padding: 48px;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.modal-content .close {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-images-two {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.modal-images-two img {
+  width: 270px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+select {
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 200px;
+  font-family: inherit;
+}
+
+.modal-info button.add-to-cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #1d1b1b, #000000);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-info button.add-to-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.product-divider {
+  height: 20px;
+  background: url("img/frame.png") repeat-x;
+  background-size: auto 100%;
+  margin-top: -40px;
+}
+
+.product-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5px;
+  padding-bottom: 24px;
+}
+
+.product-button {
+  width: 305px;
+  height: 48px;
+  font-size: 18px;
+  font-family: "Book Antiqua", serif;
+  font-style: italic;
+  background: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 48px;
+  text-align: center;
+  padding-top: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  transition: text-decoration 0.2s ease;
+}
+
+.product-button:hover {
+  text-decoration: underline;
+}
+
+.button-frame {
+  width: 20px;
+  height: 48px;
+  background: url("img/frame-vertical.png") repeat-y;
+  background-size: 100% auto;
+  flex-shrink: 0;
+  display: inline-block;
+}

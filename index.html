@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Декадент 3:33</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <span id="logo" class="brand" data-text="ДЕКАДЕНТ 3:33"
+        >ДЕКАДЕНТ 3:33</span>
+      <span class="cart">КОРЗИНА <span class="count">(0)</span></span>
+    </header>
+
+    <div class="frame-wrapper">
+      <div class="frame-horizontal top"></div>
+
+      <div class="hero">
+        <div class="hero-left">
+          <img src="img/left.png" alt="left" />
+        </div>
+
+        <div class="hero-frame-between"></div>
+
+        <div class="hero-center">
+          <video src="img/video.mp4" autoplay loop muted></video>
+        </div>
+
+        <div class="hero-frame-between"></div>
+
+        <div class="hero-right">
+          <img src="img/right.png" alt="right" />
+        </div>
+      </div>
+
+      <div class="frame-horizontal bottom"></div>
+    </div>
+
+    <div class="products">
+      <div class="product product-classic" data-modal="modal-classic">
+        <img src="img/classic.png" alt="Классика" />
+        <div class="info"><span>Классика</span><span>5000RUB</span></div>
+        <div class="hover-overlay">Подробнее</div>
+      </div>
+      <div class="product-frame"></div>
+
+      <div class="product" data-modal="modal-hood">
+        <img src="img/ondahood.png" alt="на твоем районе" />
+        <div class="info"><span>на твоем районе</span><span>5000RUB</span></div>
+        <div class="hover-overlay">Подробнее</div>
+      </div>
+      <div class="product-frame"></div>
+
+      <div class="product" data-modal="modal-jacket">
+        <img src="img/jacket.png" alt="рубашка" />
+        <div class="info"><span>рубашка</span><span>3500RUB</span></div>
+        <div class="hover-overlay">Подробнее</div>
+      </div>
+      <div class="product-frame"></div>
+
+      <div class="product" data-modal="modal-defform">
+        <img src="img/defform.png" alt="дефформация" />
+        <div class="info"><span>дефформация</span><span>4990RUB</span></div>
+        <div class="hover-overlay">Подробнее</div>
+      </div>
+      <div class="product-frame"></div>
+
+      <div class="product" data-modal="modal-cross">
+        <img src="img/cross.png" alt="крест" />
+        <div class="info"><span>крест</span><span>****RUB</span></div>
+        <div class="hover-overlay">Подробнее</div>
+      </div>
+      <div class="product-frame"></div>
+
+      <div class="product" data-modal="modal-stop">
+        <img src="img/stop!.png" alt="Стой!" />
+        <div class="info"><span>Стой!</span><span>2000RUB</span></div>
+        <div class="hover-overlay">Подробнее</div>
+      </div>
+    </div>
+
+    <div class="product-divider"></div>
+    <div class="product-buttons">
+      <a href="https://t.me/dekadentdlyavseh" class="product-button">канал</a>
+      <div class="button-frame"></div>
+      <a href="https://t.me/yslygasvyazi" class="product-button">помощь</a>
+      <div class="button-frame"></div>
+      <a href="unreleased.html" class="product-button">тайна</a>
+      <div class="button-frame"></div>
+      <a href="https://parad1st.github.io/Screamer/" class="product-button"
+        >непоколибимый</a
+      >
+      <div class="button-frame"></div>
+      <a href="#" class="product-button">инфо</a>
+      <div class="button-frame"></div>
+      <a href="#" class="product-button">оферта</a>
+    </div>
+
+    <div class="modal" id="modal-classic">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-images-two">
+          <img src="img/classic.png" alt="Классика перед" />
+          <img src="img/classic2.png" alt="Классика зад" />
+        </div>
+        <div class="modal-info">
+          <h2>Классика</h2>
+          <p>Краткое описание модели …</p>
+          <label
+            >Размер:
+            <select>
+              <option>— Размер —</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+          </label>
+          <button class="add-to-cart">В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-hood">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-images-two">
+          <img src="img/ondahood.png" alt="на районе перед" />
+          <img src="img/ondahood2.png" alt="на районе зад" />
+        </div>
+        <div class="modal-info">
+          <h2>на твоем районе</h2>
+          <p>Описание модели …</p>
+          <label
+            >Размер:
+            <select>
+              <option>— Размер —</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+          </label>
+          <button class="add-to-cart">В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-jacket">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-images-two">
+          <img src="img/jacket.png" alt="рубашка перед" />
+          <img src="img/jacket2.png" alt="рубашка зад" />
+        </div>
+        <div class="modal-info">
+          <h2>рубашка</h2>
+          <p>Описание модели …</p>
+          <label
+            >Размер:
+            <select>
+              <option>— Размер —</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+          </label>
+          <button class="add-to-cart">В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-defform">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-images-two">
+          <img src="img/defform.png" alt="дефформация перед" />
+          <img src="img/defform2.png" alt="дефформация зад" />
+        </div>
+        <div class="modal-info">
+          <h2>дефформация</h2>
+          <p>Описание модели …</p>
+          <label
+            >Размер:
+            <select>
+              <option>— Размер —</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+          </label>
+          <button class="add-to-cart">В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-cross">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-images-two">
+          <img src="img/cross.png" alt="крест перед" />
+          <img src="img/cross2.png" alt="крест зад" />
+        </div>
+        <div class="modal-info">
+          <h2>крест</h2>
+          <p>Описание модели …</p>
+          <label
+            >Размер:
+            <select>
+              <option>— Размер —</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+          </label>
+          <button class="add-to-cart">В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-stop">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-images-two">
+          <img src="img/stop!.png" alt="Стой перед" />
+          <img src="img/stop!2.png" alt="Стой зад" />
+        </div>
+        <div class="modal-info">
+          <h2>Стой!</h2>
+          <p>Описание модели …</p>
+          <label
+            >Размер:
+            <select>
+              <option>— Размер —</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+          </label>
+          <button class="add-to-cart">В корзину</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
