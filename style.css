@@ -330,3 +330,36 @@ select {
   flex-shrink: 0;
   display: inline-block;
 }
+
+.count {
+  opacity: 0.8;
+  transition: color .2s;
+}
+.cart:hover .count { color:#f00; }  
+
+.remove-item {
+  background: none;
+  border: none;
+  color: #c00;
+  font-size: 20px;
+  margin-left: 8px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.remove-item:hover {
+  color: #f33;
+}
+
+#modal-cart h2,
+#modal-cart #empty-cart {
+  margin: 0;                 
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#modal-cart #empty-cart {
+  margin-left: 12px;         
+  opacity: .7;
+}
+
